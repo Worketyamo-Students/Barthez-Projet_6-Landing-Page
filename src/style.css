@@ -20,7 +20,7 @@
     /* Sizes */
     --font-sizeh1:  6.2rem;
     --font-sizeh2: 5.6rem;
-    --font-text: 1.5rem;
+    --font-text: 1.6rem;
     --font-link: 1.6rem;
     
     /* Padding */
@@ -173,26 +173,26 @@ header .hamberger{
 }
 
 /* ---------------------------------- MAIN ---------------------------------- */
-section{
+section,
+.container.flex{
     padding: var(--section-padding);
 }
 
-section.flex{
+section.flex,
+.container.flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--section-gap);
 }
 
-section.flex .content {
+section.flex .content,
+section.flex .img{
     max-width: calc(50vw - (var(--section-padding) + var(--section-gap)/2));
 }
 
-section.flex .img {
-    max-width: calc(50vw - (var(--section-padding) + var(--section-gap)/2));
-}
-
-section.flex .img img{
+section.flex .img img,
+.container.flex .img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -203,13 +203,16 @@ h2.title{
     font-weight: 800;
     font-size: var(--font-sizeh1);
     color: var(--dark-color);
+    line-height: 7.9rem;
 }
 
 section h2.title{
     font-size: var(--font-sizeh2);
+    line-height: 6rem;
 }
 
-section.flex .content {
+section.flex .content,
+.container.flex .content{
     display: flex;
     gap: 2.4rem;
     flex-direction: column;
@@ -266,35 +269,26 @@ section.first .tools img{
     padding-left: 1rem;
 }
 
-section.forth{
-    position: relative;
-    margin: var(--body-padding);
-    border-radius: 2rem;
-    background: rgba(89, 28, 135, .7);
-    padding: 1rem 0;
+section.forth .container{
+    border-radius: 3rem;
+    background: rgba(88, 28, 135, 0.75);
     overflow: hidden;
 }
 
-section.forth .bg_img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-section.forth .bg_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-section.forth :is(h2, p, span){
+section.forth :is(h2, p){
     color: var(--white-color);
 }
+
+section.forth .container .cta_link{
+    background: transparent;
+    color: var(--white-color);
+}
+
+.container.flex .img,
+.container.flex .content {
+    max-width: calc(50vw - (var(--section-padding) + var(--section-gap)));
+}
+
 
 section .navigation{
     display: flex;
