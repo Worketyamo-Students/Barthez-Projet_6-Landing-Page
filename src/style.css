@@ -128,7 +128,9 @@ header .buttons{
     font-size: 1.6rem;
 }
 
-.ctabtn2{
+.ctabtn2,
+.cta_link{
+    width: fit-content;
     display: flex;
     align-items: center;
     border-radius: .8rem;
@@ -141,11 +143,19 @@ header .buttons{
     white-space: nowrap;
 }
 
-.ctabtn2:hover{
+.cta_link {
+    background-color: var(--white-color);
+    color: var(--blue-color);
+    padding-left: 0;
+}
+
+.ctabtn2:hover,
+.cta_link:hover {
     background-color: #0335bf;
 }
 
-.ctabtn2 img{
+.ctabtn2 img,
+.cta_link img {
     width: 1.4rem;
     height: 1.4rem;
 }
@@ -186,10 +196,14 @@ section.flex .img img{
     object-fit: contain;
 }
 
-section h1.title{
+section h1.title h2.title{
     font-weight: 800;
     font-size: 6.2rem;
     color: var(--dark-color);
+}
+
+section h2.title{
+    font-size: 5.6rem;
 }
 
 section.flex .content {
