@@ -23,6 +23,7 @@
     
     /* Padding */
     --section-padding: 8rem;
+    --section-gap: 8rem;
 }
 
 /* -------------------------- PROPRIETES GENERALES -------------------------- */
@@ -119,7 +120,7 @@ header .buttons{
     gap: 1.6rem;
 }
 
-header .btn1{
+.ctabtn1{
     color: var(--blue-color);
     background: var(--white-color);
     padding: 1.2rem .8rem;
@@ -127,7 +128,7 @@ header .btn1{
     font-size: 1.6rem;
 }
 
-header .btn2{
+.ctabtn2{
     display: flex;
     align-items: center;
     border-radius: .8rem;
@@ -137,13 +138,14 @@ header .btn2{
     color: var(--white-color);
     font-size: 1.6rem;
     font-weight: 500;
+    white-space: nowrap;
 }
 
-header .btn2:hover{
-    scale: .95;
+.ctabtn2:hover{
+    background-color: #0335bf;
 }
 
-header .btn2 img{
+.ctabtn2 img{
     width: 1.4rem;
     height: 1.4rem;
 }
@@ -160,11 +162,202 @@ header .hamberger{
 
 /* ---------------------------------- MAIN ---------------------------------- */
 section{
-    margin-bottom: var(--section-padding);
-    padding: 0 var(--body-padding);
+    padding: var(--section-padding);
+}
+
+section.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--section-gap);
+}
+
+section.flex .content {
+    max-width: calc(50vw - (var(--section-padding) + var(--section-gap)/2));
+}
+
+section.flex .img {
+    max-width: calc(50vw - (var(--section-padding) + var(--section-gap)/2));
+}
+
+section.flex .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+section h1.title{
+    font-weight: 800;
+    font-size: 6.2rem;
+    color: var(--dark-color);
+}
+
+section.flex .content {
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+}
+
+section .paragraph{
+    font-size: 1.8rem;
+    color: var(--gray-color);
+}
+
+section.first form{
+    display: flex;
+    gap: 1.6rem;
+    width: 100%;
+}
+
+section.first form .inputBox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    border: 1px solid #CBD5E1;
+    border-radius: .8rem;
+    gap: .8rem;
+}
+
+section.first form .inputBox img{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+section.first form .inputBox input{
+    width: 80%;
+    font-size: 1.8rem;
+    border: none;
+    background: transparent;
+}
+
+section.first form .inputBox input::placeholder{
+    font-size: 1.6rem;
+}
+
+section.first .tools{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4%;
+    padding: 1rem;
+    background: #F1F5F9;
 }
 
+section.first .tools img{
+    height: 2.4rem;
+    padding-left: 1rem;
+}
+
+section.forth{
+    position: relative;
+    margin: var(--body-padding);
+    border-radius: 2rem;
+    background: rgba(89, 28, 135, .7);
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+section.forth .bg_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+section.forth .bg_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+section.forth :is(h2, p, span){
+    color: var(--white-color);
+}
+
+section .navigation{
+    display: flex;
+    /* padding: .3rem; */
+    border: 1px solid var(--gray-color-second);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+section .navigation li{
+    border-right: 1px solid #000;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+section.last{
+    display: block;
+    background: var(--linear);
+    margin: 0 var(--body-padding);
+    border-radius: 2rem;
+}
+
+section.last .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: var(--section-padding) 0;
+}
+
+section.last .title h2{
+    text-align: center;
+    color: var(--white-color);
+}
+
+section.last .content p{
+    text-align: center;
+    color: var(--white-color);
+}
+
+section.last .content .link a{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+/* --------------------------------- FOOTER ---------------------------------  */
+footer.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--body-padding) / 2);
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+footer .block1 span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+}
+
+footer .block2{
+    display: flex;
+}
+
+footer .block2 li{
+    margin-right: 1.5rem;
+}
+
+footer .block2 li a{
+    color: var(--dark-color);
+}
+
+/* ---------------------- RESPONSIVE WITH MEDIA QUERIES --------------------- */
