@@ -18,8 +18,10 @@
     --linear: linear-gradient(99.45deg, #312E81 0%, #1E40AF 0.01%, #1E3A8A 46%, #701A75 96.97%);
     
     /* Sizes */
-    --font-size: 4.5rem;
-    --font-sizeh2: 3.5rem;
+    --font-sizeh1:  6.2rem;
+    --font-sizeh2: 5.6rem;
+    --font-text: 1.5rem;
+    --font-link: 1.6rem;
     
     /* Padding */
     --section-padding: 8rem;
@@ -49,7 +51,7 @@ body{
     font-family: 'Roboto', sans-serif;
     max-width: 100vw;
     min-height: 100vh;
-    font-size: 1.8rem;
+    font-size: var(--font-text);
 }
 
 .container{
@@ -84,7 +86,7 @@ header .link{
     display: flex;
     align-items: center;
     position: relative;
-    font-size: 1.6rem;
+    font-size: var(--font-link);
     font-weight: 500;
     padding: .2rem .8rem;
 }
@@ -106,7 +108,7 @@ header .link a{
 }
 
 header .link i{
-    font-size: 1.6rem;
+    font-size: var(--font-link);
     cursor: pointer;
 }
 
@@ -125,7 +127,7 @@ header .buttons{
     background: var(--white-color);
     padding: 1.2rem .8rem;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: var(--font-link);
 }
 
 .ctabtn2,
@@ -138,7 +140,7 @@ header .buttons{
     gap: 1.6rem;
     background-color: var(--blue-color);
     color: var(--white-color);
-    font-size: 1.6rem;
+    font-size: var(--font-link);
     font-weight: 500;
     white-space: nowrap;
 }
@@ -196,14 +198,15 @@ section.flex .img img{
     object-fit: contain;
 }
 
-section h1.title h2.title{
+section h1.title,
+h2.title{
     font-weight: 800;
-    font-size: 6.2rem;
+    font-size: var(--font-sizeh1);
     color: var(--dark-color);
 }
 
 section h2.title{
-    font-size: 5.6rem;
+    font-size: var(--font-sizeh2);
 }
 
 section.flex .content {
@@ -213,7 +216,7 @@ section.flex .content {
 }
 
 section .paragraph{
-    font-size: 1.8rem;
+    font-size: var(--font-text);
     color: var(--gray-color);
 }
 
