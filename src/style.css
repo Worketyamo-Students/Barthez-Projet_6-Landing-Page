@@ -342,6 +342,10 @@ section .navigation li{
     flex: 1;
 }
 
+section .navigation li:first-child{
+    background: var(--gray-color-thirt);
+}
+
 section .navigation li:last-child{
     border-right: 0;
 }
