@@ -96,8 +96,8 @@ header .link.active a{
     color: var(--blue-color);
 }
 
-header .link:hover i,
-header .link.active i{
+header .link:hover img,
+header .link.active img{
     color: var(--blue-color);
 }
 
@@ -107,12 +107,12 @@ header .link a{
     padding: .6rem;
 }
 
-header .link i{
+header .link img{
     font-size: var(--font-link);
     cursor: pointer;
 }
 
-header .link i:hover{
+header .link img:hover{
     transform: translateY(.3rem);
 }
 
@@ -151,8 +151,11 @@ header .buttons{
     padding-left: 0;
 }
 
-.ctabtn2:hover,
 .cta_link:hover {
+    gap: 2rem;
+}
+
+.ctabtn2:hover{
     background-color: #0335bf;
 }
 
@@ -188,7 +191,7 @@ section.flex,
 
 section.flex .content,
 section.flex .img{
-    max-width: calc(50vw - (var(--section-padding) + var(--section-gap)/2));
+    max-width: calc(50vw - (var(--section-padding) + var(--section-gap) / 2));
 }
 
 section.flex .img img,
@@ -269,7 +272,41 @@ section.first .tools img{
     padding-left: 1rem;
 }
 
+section.second{
+    position: relative;
+}
+
+section.second .layout{
+    position: absolute;
+    bottom: 12rem;
+    left: 2rem;
+    z-index: 1;
+}
+
+section.second .img{
+    position: relative;
+    z-index: 5;
+}
+
+section.forth .layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+section.forth .layout img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 section.forth .container{
+    position: relative;
+    z-index: 5;
     border-radius: 3rem;
     background: rgba(88, 28, 135, 0.75);
     overflow: hidden;
@@ -289,86 +326,78 @@ section.forth .container .cta_link{
     max-width: calc(50vw - (var(--section-padding) + var(--section-gap)));
 }
 
-
 section .navigation{
+    width: 100%;
     display: flex;
-    /* padding: .3rem; */
-    border: 1px solid var(--gray-color-second);
+    justify-content: space-between;
+    border: .1rem solid var(--gray-color-second);
     border-radius: .5rem;
     overflow: hidden;
 }
 
 section .navigation li{
-    border-right: 1px solid #000;
+    border-right: 1px solid var(--gray-color-second);
     padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    text-align: center;
+    flex: 1;
 }
 
-
-
-section.last{
-    display: block;
-    background: var(--linear);
-    margin: 0 var(--body-padding);
-    border-radius: 2rem;
+section .navigation li:last-child{
+    border-right: 0;
 }
 
 section.last .content{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 1rem;
-    padding: var(--section-padding) 0;
+    gap: 4rem;
+    border-radius: 3rem;
+    background: var(--linear);
+    padding: var(--section-padding);
 }
 
-section.last .title h2{
+section.last .title{
     text-align: center;
     color: var(--white-color);
 }
 
-section.last .content p{
+section.last .content .paragraph{
     text-align: center;
     color: var(--white-color);
 }
 
-section.last .content .link a{
-    font-size: 1.2rem;
-    font-weight: 500;
+section.last .cta_link{
+    padding: 1.2rem 2.8rem;
+    color: var(--white-color);
+    background: var(--blue-color);
 }
 
 
 /* --------------------------------- FOOTER ---------------------------------  */
 footer.footer{
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: calc(var(--body-padding) / 2);
-    font-size: 1rem;
-    color: var(--dark-color);
+    padding: calc(var(--section-padding) / 2) var(--section-padding);
+    font-size: 1.6rem;
+    color: var(--gray-color);
 }
 
-footer .block1 span{
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: default;
-    user-select: none;
+footer .block1 a{
+    color: var(--dark-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-right: .8rem;
 }
 
 footer .block2{
     display: flex;
-}
-
-footer .block2 li{
-    margin-right: 1.5rem;
+    gap: 1.2rem;
 }
 
 footer .block2 li a{
-    color: var(--dark-color);
+    color: var(--gray-color);
 }
 
 /* ---------------------- RESPONSIVE WITH MEDIA QUERIES --------------------- */
